@@ -130,27 +130,27 @@ export default function Footer() {
               <h5>Follow Us</h5>
               <ul className="flex gap-x-4">
                 <li>
-                  <Link href="" scroll={false}>
+                  <Link aria-label="Follow on YouTube" href="" scroll={false}>
                     <YouTubeIcon />
                   </Link>
                 </li>
                 <li>
-                  <Link href="" scroll={false}>
+                  <Link aria-label="Follow on Facebook" href="" scroll={false}>
                     <FacebookIcon />
                   </Link>
                 </li>
                 <li>
-                  <Link href="" scroll={false}>
+                  <Link aria-label="Follow on Twitter" href="" scroll={false}>
                     <TwitterIcon />
                   </Link>
                 </li>
                 <li>
-                  <Link href="" scroll={false}>
+                  <Link aria-label="Follow on Instagram" href="" scroll={false}>
                     <InstagramIcon />
                   </Link>
                 </li>
                 <li>
-                  <Link href="" scroll={false}>
+                  <Link aria-label="Follow on LinkedIn" href="" scroll={false}>
                     <LinkedInIcon />
                   </Link>
                 </li>
