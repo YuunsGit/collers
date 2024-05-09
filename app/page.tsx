@@ -1,113 +1,269 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import DecoVideo from "@/components/deco-video";
+import Testimonials from "@/components/testimonials";
+import Tabs from "@/components/tabs";
+import Locations from "@/components/locations";
+
+import WatchIcon from "@/assets/icons/watch.svg";
+import HeroIcon1 from "@/assets/icons/hero-icon1.svg";
+import HeroIcon2 from "@/assets/icons/hero-icon2.svg";
+import HeroIcon3 from "@/assets/icons/hero-icon3.svg";
+import ShopIcon from "@/assets/icons/shop.svg";
+
+import sneaker from "@/assets/images/shoe.png";
+import product1 from "@/assets/images/products/product1.jpeg";
+import product2 from "@/assets/images/products/product2.jpeg";
+import product3 from "@/assets/images/products/product3.jpeg";
+import check from "@/assets/icons/check.svg?url";
+import collection from "@/assets/images/collection.png";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="text-dark">
+      <section className="bg-hero-small md:bg-hero-medium lg:bg-hero-large">
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-12 lg:px-20">
+          <div className="flex flex-col items-center justify-between gap-x-20 gap-y-8 py-12 text-center lg:flex-row lg:py-20 lg:text-left">
+            <div className="space-y-8">
+              <h1 className="text-6xl font-bold leading-[110%] xl:text-7xl">
+                Collectible Sneakers
+              </h1>
+              <p className="text-lg">
+                Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
+                suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum
+                ultrices amet.
+              </p>
+              <div className="flex items-center justify-center gap-x-4 font-medium text-byellow lg:justify-start">
+                <Link
+                  href=""
+                  scroll={false}
+                  className="active:bg-bdarkyellow active:border-bdarkyellow inline-block whitespace-nowrap rounded-lg border-2 border-byellow px-7 py-3 text-xl hover:bg-byellow hover:text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow"
+                >
+                  Sign up now
+                </Link>
+                <div className="px-2 py-3">
+                  <Link
+                    href=""
+                    scroll={false}
+                    className="hover:text-bdarkyellow flex items-center rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow"
+                  >
+                    <WatchIcon />
+                    <span className="whitespace-nowrap px-2">Watch Demo</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="relative z-10 flex-shrink-0">
+              <div className="absolute bottom-0 left-0 right-0 -z-10 mx-auto h-[88%] w-[80%] rounded-[50px] bg-[#FBBF24]" />
+              <Image
+                src={sneaker}
+                priority
+                alt="Sneaker"
+                height={0}
+                width={0}
+                quality={100}
+                className="mb-9 h-auto w-[360px] xl:w-[486px]"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-x-20 gap-y-8 py-12 text-center md:flex-row md:text-left lg:py-20">
+            <div className="space-y-2.5">
+              <HeroIcon1 className="mx-auto md:mx-0" />
+              <h3 className="text-xl font-medium">Nibh viverra</h3>
+              <p className="text-lg">
+                Sit bibendum donec dolor fames neque vulputate non sit aliquam.
+                Consequat turpis natoque leo, massa.
+              </p>
+            </div>
+            <div className="space-y-2.5">
+              <HeroIcon2 className="mx-auto md:mx-0" />
+              <h3 className="text-xl font-medium">Cursus amet</h3>
+              <p className="text-lg">
+                Sit bibendum donec dolor fames neque vulputate non sit aliquam.
+                Consequat turpis natoque leo, massa.
+              </p>
+            </div>
+            <div className="space-y-2.5">
+              <HeroIcon3 className="mx-auto md:mx-0" />
+              <h3 className="text-xl font-medium">Ipsum fermentum</h3>
+              <p className="text-lg">
+                Sit bibendum donec dolor fames neque vulputate non sit aliquam.
+                Consequat turpis natoque leo, massa.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="bg-dark text-white">
+        <div className="mx-auto max-w-screen-2xl space-y-8 overflow-hidden px-4 py-12 sm:px-12 lg:space-y-20 lg:px-20 lg:py-20">
+          <div className="flex w-full flex-col items-center justify-between gap-y-8 md:flex-row">
+            <h2 className="z-20 text-3xl font-bold lg:text-6xl lg:font-extrabold">
+              The best of the best
+            </h2>
+            <Link
+              href=""
+              scroll={false}
+              className="whitespace-nowrap rounded-lg border-2 border-white px-12 py-5 text-2xl font-bold leading-none hover:bg-white hover:text-dark focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:border-slate-200 active:bg-slate-200"
+            >
+              Sign up now
+            </Link>
+          </div>
+          <div className="relative z-10 flex flex-col gap-x-12 gap-y-8 lg:flex-row">
+            <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-[108%] -translate-x-1/2 -translate-y-1/2 bg-[url('/backlights-mobile.svg')] bg-contain bg-center bg-no-repeat lg:bg-[url('/backlights.svg')]" />
+            <div className="overflow-hidden rounded-[10px] border border-dark bg-dark shadow-product">
+              <div className="relative h-56">
+                <Image
+                  src={product1}
+                  alt="Product 1"
+                  className="object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  placeholder="blur"
+                />
+              </div>
+              <div className="space-y-4 p-8 pb-0">
+                <h3 className="text-2xl font-bold">Title</h3>
+                <p className="text-lg">
+                  Egestas elit dui scelerisque ut eu purus aliquam vitae
+                  habitasse.
+                </p>
+              </div>
+              <Link
+                href=""
+                scroll={false}
+                className="m-8 flex items-center justify-center rounded-lg border-2 border-white p-4 text-xl font-medium  hover:bg-white hover:text-dark focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:border-slate-200 active:bg-slate-200"
+              >
+                <ShopIcon />
+                <span className="px-4">Buy now</span>
+              </Link>
+            </div>
+            <div className="overflow-hidden rounded-[10px] border border-dark bg-dark shadow-product">
+              <div className="relative h-56">
+                <Image
+                  src={product2}
+                  alt="Product 2"
+                  className="object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  placeholder="blur"
+                />
+              </div>
+              <div className="space-y-4 p-8 pb-0">
+                <h3 className="text-2xl font-bold">Title</h3>
+                <p className="text-lg">
+                  Egestas elit dui scelerisque ut eu purus aliquam vitae
+                  habitasse.
+                </p>
+              </div>
+              <Link
+                href=""
+                scroll={false}
+                className="m-8 flex items-center justify-center rounded-lg border-2 border-white p-4 text-xl font-medium  hover:bg-white hover:text-dark focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:border-slate-200 active:bg-slate-200"
+              >
+                <ShopIcon />
+                <span className="px-4">Buy now</span>
+              </Link>
+            </div>
+            <div className="overflow-hidden rounded-[10px] border border-dark bg-dark shadow-product">
+              <div className="relative h-56">
+                <Image
+                  src={product3}
+                  alt="Product 3"
+                  className="object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  placeholder="blur"
+                />
+              </div>
+              <div className="space-y-4 p-8 pb-0">
+                <h3 className="text-2xl font-bold">Title</h3>
+                <p className="text-lg">
+                  Egestas elit dui scelerisque ut eu purus aliquam vitae
+                  habitasse.
+                </p>
+              </div>
+              <Link
+                href=""
+                scroll={false}
+                className="m-8 flex items-center justify-center rounded-lg border-2 border-white p-4 text-xl font-medium  hover:bg-white hover:text-dark focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:border-slate-200 active:bg-slate-200"
+              >
+                <ShopIcon />
+                <span className="px-4">Buy now</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <section>
+        <div className="mx-auto max-w-screen-2xl overflow-hidden px-4 py-4 pb-14 sm:px-12 lg:px-20 lg:py-40 lg:pb-40">
+          <div className="mx-auto flex w-fit flex-col items-center justify-between gap-x-20 gap-y-8 rounded-[30px] bg-transparent px-4 py-8 shadow-join-us lg:flex-row lg:bg-white lg:px-20 lg:py-20">
+            <div className="z-10 space-y-6">
+              <h2 className="text-center text-3xl font-bold lg:text-left lg:text-6xl lg:font-extrabold">
+                Why join us
+              </h2>
+              <ul
+                style={{
+                  listStyleImage: `url(${check.src})`,
+                  paddingInlineStart: "2rem",
+                }}
+                className="text-base leading-6 lg:text-xl lg:leading-9"
+              >
+                <li>Est et in pharetra magna adipiscing ornare aliquam.</li>
+                <li>Tellus arcu sed consequat ac velit ut eu blandit.</li>
+                <li>Ullamcorper ornare in et egestas dolor orci.</li>
+              </ul>
+              <Link
+                href=""
+                scroll={false}
+                className="active:bg-bdarkyellow active:border-bdarkyellow inline-block whitespace-nowrap rounded-lg border-2 border-byellow px-7 py-3 text-xl text-byellow hover:bg-byellow hover:text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow"
+              >
+                Sign up now
+              </Link>
+            </div>
+            <div className="relative z-0 overflow-visible sm:w-[330px] lg:w-auto">
+              <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-[180%] max-w-[924px] -translate-x-1/2 -translate-y-1/2 bg-[url('/video-background.svg')] bg-cover" />
+              <DecoVideo className="h-auto max-w-full overflow-visible rounded-[20px] shadow-video" />
+              <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 size-[180%] max-w-[924px] -translate-x-1/2 -translate-y-1/2 bg-[url('/video-foreground.svg')] bg-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <section className="bg-[url(/waves.svg)] bg-[length:300%_auto] bg-left-bottom bg-no-repeat sm:bg-[length:100%_auto] sm:bg-bottom">
+        <Testimonials />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <div className="mx-auto max-w-screen-2xl space-y-8 px-4 py-12 pb-24 sm:space-y-20 sm:px-12 sm:pb-32 lg:px-20 lg:py-20">
+          <div className="space-y-2 text-center sm:space-y-8 sm:text-left">
+            <h2 className="mx-auto text-3xl font-bold sm:mx-0 lg:text-6xl lg:font-extrabold">
+              Grow your collection
+            </h2>
+            <p className="text-lg">
+              Enim neque massa porta adipiscing elit. Sem libero id faucibus
+              nibh amet dictum pellentesque sed. Eu non turpis risus odio
+              sapien, fames sit rhoncus. Nec magna sed interdum sit purus
+              tellus. Et volutpat proin neque placerat at bibendum quam tellus.
+            </p>
+          </div>
+          <div className="flex flex-col justify-between gap-x-20 gap-y-8 lg:flex-row ">
+            <Tabs />
+            <div>
+              <Image
+                src={collection}
+                alt="Sneaker collection"
+                height={556}
+                width={944}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section className="bg-byellow">
+        <Locations />
+      </section>
     </main>
   );
 }
