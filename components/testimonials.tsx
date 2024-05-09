@@ -122,14 +122,16 @@ export default function Testimonials() {
           <button
             onClick={onPrevButtonClick}
             disabled={prevBtnDisabled}
-            className="active:bg-bdarkyellow active:border-bdarkyellow rounded-full border-2 border-byellow p-3 hover:bg-byellow hover:text-banana focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow"
+            aria-label="Previous slide"
+            className="rounded-full border-2 border-byellow p-3 hover:bg-byellow hover:text-banana focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow active:border-bdarkyellow active:bg-bdarkyellow"
           >
             <ArrowIcon className="rotate-180" />
           </button>
           <button
             onClick={onNextButtonClick}
             disabled={nextBtnDisabled}
-            className="active:bg-bdarkyellow active:border-bdarkyellow rounded-full border-2 border-byellow p-3 hover:bg-byellow hover:text-banana focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow"
+            aria-label="Next slide"
+            className="rounded-full border-2 border-byellow p-3 hover:bg-byellow hover:text-banana focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow active:border-bdarkyellow active:bg-bdarkyellow"
           >
             <ArrowIcon />
           </button>

@@ -38,7 +38,7 @@ export default function Home() {
                 <Link
                   href=""
                   scroll={false}
-                  className="active:bg-bdarkyellow active:border-bdarkyellow inline-block whitespace-nowrap rounded-lg border-2 border-byellow px-7 py-3 text-xl hover:bg-byellow hover:text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow"
+                  className="inline-block whitespace-nowrap rounded-lg border-2 border-byellow px-7 py-3 text-xl hover:bg-byellow hover:text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow active:border-bdarkyellow active:bg-bdarkyellow"
                 >
                   Sign up now
                 </Link>
@@ -46,7 +46,7 @@ export default function Home() {
                   <Link
                     href=""
                     scroll={false}
-                    className="hover:text-bdarkyellow flex items-center rounded focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow"
+                    className="flex items-center rounded hover:text-bdarkyellow focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow"
                   >
                     <WatchIcon />
                     <span className="whitespace-nowrap px-2">Watch Demo</span>
@@ -60,9 +60,9 @@ export default function Home() {
                 src={sneaker}
                 priority
                 alt="Sneaker"
-                height={0}
-                width={0}
-                quality={100}
+                height={486}
+                width={394}
+                quality={95}
                 className="mb-9 h-auto w-[360px] xl:w-[486px]"
               />
             </div>
@@ -218,7 +218,7 @@ export default function Home() {
               <Link
                 href=""
                 scroll={false}
-                className="active:bg-bdarkyellow active:border-bdarkyellow mx-auto block w-fit whitespace-nowrap rounded-lg border-2 border-byellow px-7 py-3 text-xl text-byellow hover:bg-byellow hover:text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow lg:mx-0"
+                className="mx-auto block w-fit whitespace-nowrap rounded-lg border-2 border-byellow px-7 py-3 text-xl text-byellow hover:bg-byellow hover:text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow active:border-bdarkyellow active:bg-bdarkyellow lg:mx-0"
               >
                 Sign up now
               </Link>

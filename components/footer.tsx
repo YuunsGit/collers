@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-12 md:px-20">
         <div className="grid grid-cols-1 gap-12 border-b border-[#334155] py-12 text-center sm:grid-cols-2 sm:text-left md:grid-cols-4">
           <div className="space-y-6 py-6">
-            <h4 className="text-white">Product</h4>
+            <h3 className="text-white">Product</h3>
             <ul className="space-y-6">
               <li>
                 <Link href="" scroll={false}>
@@ -47,7 +47,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="space-y-6 py-6">
-            <h4 className="text-white">Solutions</h4>
+            <h3 className="text-white">Solutions</h3>
             <ul className="space-y-6">
               <li>
                 <Link href="" scroll={false}>
@@ -77,7 +77,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="space-y-6 py-6">
-            <h4 className="text-white">Support</h4>
+            <h3 className="text-white">Support</h3>
             <ul className="space-y-6">
               <li>
                 <Link href="" scroll={false}>
@@ -107,7 +107,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="flex flex-col gap-y-6 py-6">
-            <h4 className="text-white">Get the App</h4>
+            <h3 className="text-white">Get the App</h3>
             <div className="mx-auto space-y-4 sm:mx-0">
               <Link href="" scroll={false} className="block">
                 <Image
