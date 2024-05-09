@@ -113,7 +113,7 @@ export default function Testimonials() {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <div className="space-y-20 pb-14 pt-20">
+    <div className="space-y-8 pb-6 pt-12 sm:space-y-20 lg:pb-14 lg:pt-20">
       <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between px-4 sm:px-12 lg:px-20">
         <h2 className="mx-auto text-center text-3xl font-bold sm:mx-0 sm:text-left lg:text-6xl lg:font-extrabold">
           Because they love us

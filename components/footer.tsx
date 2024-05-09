@@ -112,6 +112,7 @@ export default function Footer() {
               <Link href="" scroll={false} className="block">
                 <Image
                   src={appStore}
+                  quality={100}
                   alt="App Store logo"
                   className="mx-auto sm:mx-0"
                 />
@@ -119,6 +120,7 @@ export default function Footer() {
               <Link href="" scroll={false} className="block">
                 <Image
                   src={googlePlay}
+                  quality={100}
                   alt="Google Play Store logo"
                   className="mx-auto sm:mx-0"
                 />
