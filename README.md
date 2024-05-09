@@ -3,10 +3,13 @@
 </div>
 
 <h1 align="center">
-  Collers Collection - Template
+  Collers Collection - <a href="https://collers.yunusemre.dev" target="_blank">collers.yunusemre.dev</a>
 </h1>
 <p align="center">
   Sneaker collection webpage template.
+  <br/>
+  <br/>
+  <img alt="React" src="https://github.com/YuunsGit/collers/assets/42357900/3768d8ca-a2fd-4514-937c-57c6be357bbd" height="500" />
 </p>
 <br/>
 <h1 align="center">
