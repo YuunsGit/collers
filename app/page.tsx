@@ -218,7 +218,7 @@ export default function Home() {
               <Link
                 href=""
                 scroll={false}
-                className="active:bg-bdarkyellow active:border-bdarkyellow inline-block whitespace-nowrap rounded-lg border-2 border-byellow px-7 py-3 text-xl text-byellow hover:bg-byellow hover:text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow"
+                className="active:bg-bdarkyellow active:border-bdarkyellow mx-auto block w-fit whitespace-nowrap rounded-lg border-2 border-byellow px-7 py-3 text-xl text-byellow hover:bg-byellow hover:text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-byellow lg:mx-0"
               >
                 Sign up now
               </Link>
